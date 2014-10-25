@@ -1,0 +1,121 @@
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\comm\comm\@gf\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\comm\comm\@gf\ja\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\compiler\mcr\matlab\datafun\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\compiler\mcr\matlab\datafun\@uint16\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\compiler\mcr\matlab\datafun\@uint8\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\distcomp\gpu\@gpuArray\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\distcomp\parallel\@codistributed\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\dsp\dsp\+dsp\en\FFT.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\dsp\dsp\+signalblks\FFT.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\dsp\filterdesign\@qfft\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\eml\lib\matlab\datafun\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\ident\ident\@iddata\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\@uint16\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\@uint16\ja\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\@uint8\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\@uint8\ja\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\ja\fft.m
+C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\vision\vision\+vision\en\FFT.m
+
+ Volume in drive C is Acer
+ Volume Serial Number is BC0A-72C2
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\comm\comm\@gf
+------------->
+05/07/2011  17:49               585 fft.m
+               1 File(s)            585 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\comm\comm\@gf\ja
+
+27/06/2005  18:17               139 fft.m
+               1 File(s)            139 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\compiler\mcr\matlab\datafun
+
+20/07/2012  19:55                 0 fft.m
+               1 File(s)              0 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\compiler\mcr\matlab\datafun\@uint16
+
+20/07/2012  19:55               674 fft.m
+               1 File(s)            674 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\compiler\mcr\matlab\datafun\@uint8
+
+20/07/2012  19:55               674 fft.m
+               1 File(s)            674 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\distcomp\gpu\@gpuArray
+------------->
+20/07/2012  17:39               836 fft.m
+               1 File(s)            836 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\distcomp\parallel\@codistributed
+------------->
+20/07/2012  17:39             1.681 fft.m
+               1 File(s)          1.681 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\dsp\dsp\+dsp\en
+
+10/08/2012  14:55            12.432 FFT.m
+               1 File(s)         12.432 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\dsp\dsp\+signalblks
+
+27/02/2012  17:33               368 FFT.m
+               1 File(s)            368 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\dsp\filterdesign\@qfft
+
+27/09/2011  16:27             1.134 fft.m
+               1 File(s)          1.134 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\eml\lib\matlab\datafun
+
+11/10/2010  19:38               434 fft.m
+               1 File(s)            434 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\ident\ident\@iddata
+
+22/10/2011  17:47             3.866 fft.m
+               1 File(s)          3.866 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun
+------------->
+21/06/2005  15:23             1.023 fft.m
+               1 File(s)          1.023 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\@uint16
+
+17/09/2007  22:15               312 fft.m
+               1 File(s)            312 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\@uint16\ja
+
+17/03/2008  19:12                99 fft.m
+               1 File(s)             99 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\@uint8
+
+17/09/2007  22:15               310 fft.m
+               1 File(s)            310 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\@uint8\ja
+
+17/03/2008  19:13                98 fft.m
+               1 File(s)             98 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\matlab\datafun\ja
+
+04/10/2006  18:48               981 fft.m
+               1 File(s)            981 bytes
+
+ Directory of C:\Users\Filippo\Desktop\Mathematica\00runMATLAB\R2012b\toolbox\vision\vision\+vision\en
+
+10/08/2012  14:55            10.775 FFT.m
+               1 File(s)         10.775 bytes
+
+     Total Files Listed:
+              19 File(s)         36.421 bytes
+               0 Dir(s)  142.493.351.936 bytes free
