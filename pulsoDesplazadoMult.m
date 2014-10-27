@@ -2,34 +2,52 @@ T=20/1000; N=4096; dt=1/6/1000;
 f0=280;
 
 t = -T:dt:T;
-res1 = pulsocua(t, T, 1);
-res1 = desplazar(res1, t, +T/2);
-
+res1 = desplazar(pulsocua(t, T, 1), t, +T/2);
 res2 = cos( 2*pi*f0*(t-T/2) );
+
 res = res1 .* res2;
 
 transf = trfa(res, t, N);
 
-% subplot(4,1,1), stairs(t,res1)
-% subplot(4,1,2), plot(t,res2)
-% subplot(4,1,3), plot(t,res)
-% subplot(4,1,4),plot( transf(2,1:end) , transf(1,1:end) )
+figure, subplot(3,1,1), stairs(t,res1), axis([-0.025 0.025 -0.1 1.1]), xlabel('t'), ylabel('Signal') 
+subplot(3,1,2), plot(t,res2), xlabel('t'), ylabel('Signal') 
+subplot(3,1,3), plot(t,res), axis([-0.025 0.025 -1.1 1.1]), xlabel('t'), ylabel('Signal') 
 
-subplot(2,2,1), stairs(t,res1)
-subplot(2,2,2), plot(t,res2)
-subplot(2,2,3), plot(t,res)
-subplot(2,2,4),plot( transf(2,1:end) , transf(1,1:end) )
+figure, plot( transf(2,1:end), real( transf(1,1:end) ) ), xlabel('f'), ylabel('trfa') 
 
-i=0;
-for i = 1:length(yTransf)-1
-    if ( yTransf(i)<=0 && yTransf(i+1)>=0 )
-        puntos(i) = 1;
-    elseif ( yTransf(i)>=0 && yTransf(i+1)<=0 )
-        puntos(i) = -1;
-    else
-        puntos(i) = 0;
+transf([1,2],:) = transf([2,1],:); % intercanvio las filas 1 y 2 de la matriz 
+
+% derivada
+transf(3,1) =  0;
+for i = 1:length(transf)-1
+    transf(3,i) = ( transf(2,i+1)-transf(2,i) ) / ( transf(1,i+1)-transf(1,i) );
+end
+
+% intersecciones eje f
+j=1;
+for i = 1:length(transf)-1
+    if ( transf(2,i)<=0 && transf(2,i+1)>=0 )
+        intersecciones(j) = transf(1,i); 
+        j = j+1;
+    elseif ( transf(2,i)>=0 && transf(2,i+1)<=0 )
+        intersecciones(j) = transf(1,i); 
+        j = j+1;
     end
 end
-puntos(i+1) = 0;
 
-resultados = [xTransf ; yTransf ; puntos]
+% max & min relativos
+j=1;
+for i = 1:length(transf)-1
+    if ( transf(3,i)<=0 && transf(3,i+1)>=0 )
+        max_min(2,j) = abs( real( transf(2,i) ) ); 
+        max_min(1,j) = transf(1,i); 
+        j = j+1;
+    elseif ( transf(3,i)>=0 && transf(3,i+1)<=0 )
+        max_min(2,j) = abs( real( transf(2,i) ) ); 
+        max_min(1,j) = transf(1,i); 
+        j = j+1;
+    end
+end
+
+clear i;
+clear j;

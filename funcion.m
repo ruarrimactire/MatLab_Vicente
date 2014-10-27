@@ -6,50 +6,33 @@ x= escalon(t);
 
 % ploteo de escalon
 % stem(t,x,'.');
-stairs(t,x);
-axis([-3 3 -.5 1.5])
-xlabel('t')
-ylabel('Signal') 
+figure, stairs(t,x), axis([-3 3 -.5 1.5]), xlabel('t'), ylabel('Signal') 
 
 % ploteo de delta de Dirac
-stairs( t, delta(t, 1) );
-axis([-3 3 -.5 1.5])
-xlabel('t')
-ylabel('Signal') 
+figure, stairs( t, delta(t, 1) ), axis([-3 3 -.5 1.5]), xlabel('t'), ylabel('Signal') 
 
 % ploteo del pulso cuadrado
-stairs( t, pulsocua(t,1,1) );
-axis([-3 3 -3 3])
-xlabel('t')
-ylabel('Signal') 
+figure, stairs( t, pulsocua(t,1,1) ), axis([-3 3 -3 3]), xlabel('t'), ylabel('Signal') 
 
 % ploteo del pulso triangular
-result = pulsotri(t,1,1);
-plot( t, result );
-axis([-3 3 -3 3])
-xlabel('t')
-ylabel('Signal') 
+figure, plot( t, pulsotri(t,1,1) ), axis([-3 3 -3 3]), xlabel('t'), ylabel('Signal') 
 
 % ploteo del escalon invertido
-result = escalon(t);
-result = invertir(result , t);
-plot( t, result );
-axis([-3 3 -3 3])
-xlabel('t')
-ylabel('Signal') 
+invertido = invertir(escalon(t) , t);
+figure, plot( t, invertido ), axis([-3 3 -3 3]), xlabel('t'), ylabel('Signal') 
 
 % ploteo del pulso triangular desplazado
-result = pulsotri(t,1,1);
-subplot(2,1,1) , plot( t, result );
-axis([-3 3 -3 3])
-xlabel('t')
-ylabel('Signal')
+triangular = pulsotri(t,1,1);
+figure, subplot(2,1,1) , plot( t, triangular ), axis([-3 3 -3 3]), xlabel('t'), ylabel('Signal')
 title('original')
-result2 = desplazar(result , t, -1);
-subplot(2,1,2) , plot( t, result2 );
-axis([-3 3 -3 3])
-xlabel('t')
-ylabel('Signal')
+subplot(2,1,2) , plot( t, desplazar(triangular , t, -1) ), axis([-3 3 -3 3]), xlabel('t'), ylabel('Signal')
+title('desplazada')
+
+% ploteo del pulso cuadrado desplazado
+cuadrado = pulsocua(t,1,1);
+figure, subplot(2,1,1) , stairs( t, cuadrado ), axis([-3 3 -3 3]), xlabel('t'), ylabel('Signal')
+title('original')
+subplot(2,1,2) , stairs( t, desplazar(cuadrado, t, 1/2) ), axis([-3 3 -3 3]), xlabel('t'), ylabel('Signal')
 title('desplazada')
 
 

@@ -4,7 +4,7 @@ function [ y ] = pulsocua( t, tau, A )
 nfin= length(t);
 y = [1:nfin] .* 0;
 for n = 1:nfin
-    if (t(n)<=+tau/2) && (t(n)>=-tau/2)    
+    if (t(n)<+tau/2) && (t(n)>=-tau/2)    
         y(n) = A; 
     end
 end

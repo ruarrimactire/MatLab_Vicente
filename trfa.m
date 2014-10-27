@@ -22,7 +22,7 @@ elseif ( ~(N >= length(x)) )
     error('el parametro N es demasiado pequeño')
     
 elseif ( ~temp1==temp2 )
-    error('el parametro N no es potenciade 2')
+    error('el parametro N no es potencia de 2')
 end
 
 end
