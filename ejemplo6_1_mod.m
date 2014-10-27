@@ -4,8 +4,8 @@ t=[0:1/fs:T];                            % puntos de muestreo
 N=length(t);
 f=sin(10*2*pi*t)+sin(20*2*pi*t);         % señal original
 g=f+randn(size(f));                      % señal con ruído
-F=trfa(f,t,N); % fft(f)/sqrt(N);                        % trasformada de Fourier de f
-G=trfa(g,t,N); % fft(g)/sqrt(N);                        % trasformada de Fourier de g
+F=fft(f)/sqrt(N);                        % trasformada de Fourier de f
+G=fft(g)/sqrt(N);                        % trasformada de Fourier de g
 % Para dibujarlo, despreciamos la mitad del dominio debido a la simetría
 omega=0.5*fs*linspace(0,1,floor(N/2)+1); % vector de frecuencias discretas
 range=(1:floor(N/2)+1);                  % rango del espectro de potencia

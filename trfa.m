@@ -1,20 +1,28 @@
 function [ output ] = trfa( x, t, N )
 %trfa Transformada de Fourier Aproximada
 %   Detailed explanation goes here
-% if N >= length(x)
-% if N == 2^n
 
-f =  -N/2:(N/2)-1;
-% X = fft(x,N);
+temp1 = log(N)/log(2);
+temp2 = floor(temp1);
+if ( (N >= length(x)) && temp1==temp2 )
+    Fmax = 1/( 2 * (t(2)-t(1)) );
+    k = -N/2:(N/2)-1;
+    df = 2*Fmax/N;
+    f = k.*df;
 
-X = f .* 0;
-for k = 1:N
-    for n = 1:length(x)-1
-        X(k) = X(k) + x(n) * exp( -1i*2*pi*f(k)*t(n) ) * (t(n+1) - t(n)) ;
-    end
-end    
-
-output = [X;f];
-
+    X = f .* 0;
+    for w = 1:length(X)
+        for n = 1:length(x)-1
+            X(w) = X(w) + x(n) * exp( -1i*2*pi*f(w)*t(n) ) * (t(n+1) - t(n)) ;
+        end
+    end    
+    output = [X;f];
+    
+elseif ( ~(N >= length(x)) )
+    error('el parametro N es demasiado pequeño')
+    
+elseif ( ~temp1==temp2 )
+    error('el parametro N no es potenciade 2')
 end
 
+end
