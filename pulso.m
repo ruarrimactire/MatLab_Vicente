@@ -10,6 +10,8 @@ subplot(2,1,2), plot( transf(2,1:end) , real( transf(1,1:end) ) )
 
 transf([1,2],:) = transf([2,1],:); % intercanvio las filas 1 y 2 de la matriz 
 
+% transf(2,:) = real( transf(2,:) ); % verificare
+
 % derivada
 transf(3,1) =  0;
 for i = 1:length(transf)-1
@@ -32,11 +34,11 @@ end
 j=1;
 for i = 1:length(transf)-1
     if ( transf(3,i)<=0 && transf(3,i+1)>=0 )
-        max_min(2,j) = abs( real( transf(2,i) ) ); 
+        max_min(2,j) = transf(2,i); 
         max_min(1,j) = transf(1,i); 
         j = j+1;
     elseif ( transf(3,i)>=0 && transf(3,i+1)<=0 )
-        max_min(2,j) = abs( real( transf(2,i) ) ); 
+        max_min(2,j) = transf(2,i); 
         max_min(1,j) = transf(1,i); 
         j = j+1;
     end
