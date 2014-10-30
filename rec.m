@@ -8,6 +8,7 @@ stem(0:Ts:1,xd)
 hold on
 xrec=[0 xd];
 plot(0:tc:1,xc,'g',Ts:Ts:1,xrec(2:end-1),'k'), grid
+legend('stem xd','xc','xrec(xd)')
 hold off
 
 end
