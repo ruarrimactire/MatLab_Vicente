@@ -1,13 +1,18 @@
-function []=rec(fs, f)
+function [xrec]=rec(fs, f)
+% fs = frequencia de muestreo
+% f = frequeccia de la señal que se qiere mostrar
 
 Ts=1/fs;
 tc=0.001*Ts;
-xc=cos(2*pi*f*(0:tc:1));
-xd=cos(2*pi*f*(0:Ts:1));
-stem(0:Ts:1,xd)
+TC = (0:tc:1);
+TS = (0:Ts:1);
+
+xc=cos(2*pi*f*TC); % señal continua
+xd=cos(2*pi*f*TS); % señal muestreada
+stem(TS,xd)
 hold on
 xrec=[0 xd];
-plot(0:tc:1,xc,'g',Ts:Ts:1,xrec(2:end-1),'k'), grid
+plot(TC,xc,'g',Ts:Ts:1,xrec(2:end-1),'k'), grid 
 hold off
 
 end
